@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link href="/css/style.css" rel="stylesheet" />
+<title>ログインページ</title>
+</head>
+<body>
+  
+  <header>
+    <h1>AR-シフト</h1>
+    <p>ユーザー登録は<a href="/user/toRegist">こちら</a></p>
+  </header>
+  
+  <main>
+    <form method="post" action="/login/user">
+      <h2>ユーザーログイン</h2>
+      <p>ユーザー名:<input type="text" name="userName" th:value="${userName}"></p>
+      <p>パスワード:<input type="password" name="password"></p>
+      <p><input type="submit" value="ログイン"></p>
+      <p class="errMessage" th:text="${errUserMessage}"></p>
+      <p th:text="${message}"></p>
+    </form>
+    
+    <form method="post" action="/login/admin">
+      <h2>管理者ログイン</h2>
+      <p>管理者名:<input type="text" name="userName"></p>
+      <p>パスワード:<input type="password" name="password"></p>
+      <p><input type="submit" value="ログイン"></p>
+      <p class="errMessage" th:text="${errAdminMessage}"></p>
+    </form>
+    
+  </main>
+
+</body>
+</html>

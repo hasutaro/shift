@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link href="/css/style.css" rel="stylesheet" />
+<title>シフト提出</title>
+</head>
+<body>
+  
+  <header>
+    <h1>AR-シフト</h1>
+    <p><a href="/login/">ログアウト</a></p>
+  </header>
+  
+  <main>
+    
+    <div class="left">
+      <h2>メニュー</h2>
+      <ul>
+        <li><a href="/user/toShiftRequest">シフト提出</a></li>
+        <li><a href="">シフト確認</a></li>
+        <li><a href="">設定</a></li>
+      </ul>
+    </div>
+    
+    <div class="right">
+      <fieldset>
+        <legend>1/1(水)</legend>
+        <p>
+          
+          <script>
+            const firstHour = 12;
+            const lastHour = 29;
+            const minutes = [0, 15, 30, 45];
+            
+            document.write('<select name="">');
+            for(let i = firstHour; i <= lastHour; i++) {
+              document.write('<option value=' + i + '>' + i + '</option>');
+            }
+            document.write('</select> : ');
+            
+            document.write('<select name="">');
+            for(const minute of minutes) {
+              document.write('<option value=' + minute + '>' + minute + '</option>');
+            }
+            document.write('</select>');
+            </script>
+          
+        </p>
+      </fieldset>
+    </div>
+    
+  </main>
+
+</body>
+</html>
